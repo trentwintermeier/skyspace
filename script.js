@@ -1,9 +1,13 @@
 const video = document.getElementById('video');
 
-navigator.mediaDevices.getUserMedia({ video: true })
-  .then(stream => {
-    video.srcObject = stream;
-  })
-  .catch(err => {
-    console.error("Camera access denied:", err);
-  });
+navigator.mediaDevices.getUserMedia({
+  video: {
+    facingMode: { exact: "environment" }  // Prefer rear-facing camera
+  }
+})
+.then(stream => {
+  video.srcObject = stream;
+})
+.catch(err => {
+  console.error("Camera access failed:", err);
+});
