@@ -30,3 +30,4 @@ document.body.addEventListener('click', () => {
     console.log('Playback prevented by browser autoplay policy');
   });
 });
+
