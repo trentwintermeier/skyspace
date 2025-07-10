@@ -7,7 +7,6 @@ html, body {
   background: black;
 }
 
-/* Camera video feed */
 #video {
   position: fixed;
   top: 0;
@@ -16,23 +15,8 @@ html, body {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  display: none; /* hidden unless selected */
 }
 
-/* Livestream iframe */
-#sky-feed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 1;
-  border: none;
-  display: none; /* hidden unless selected */
-}
-
-/* The pastel animated ceiling with oval hole */
 #mask {
   position: fixed;
   top: 0;
@@ -44,7 +28,7 @@ html, body {
   background: #ffd6e0;
   animation: pastelShift 30s infinite alternate ease-in-out;
 
-  /* Oval transparent hole in the center */
+  /* Oval hole mask */
   -webkit-mask-image: radial-gradient(ellipse at center, transparent 25%, black 26%);
   mask-image: radial-gradient(ellipse at center, transparent 25%, black 26%);
   -webkit-mask-composite: destination-out;
@@ -52,35 +36,9 @@ html, body {
 }
 
 @keyframes pastelShift {
-  0%   { background-color: #ffd6e0; }
-  25%  { background-color: #e0f7fa; }
-  50%  { background-color: #dcedc1; }
-  75%  { background-color: #fff3b0; }
-  100% { background-color: #f0d9ff; }
-}
-
-/* Overlay that prompts user to tap to start */
-#start-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.85);
-  color: white;
-  font-size: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  user-select: none;
-  text-align: center;
-}
-
-/* Smooth fade-out when dismissed */
-#start-overlay.fade {
-  transition: opacity 0.5s ease;
-  opacity: 0;
-  pointer-events: none;
+  0%   { background-color: #ffd6e0; }  /* light pink */
+  25%  { background-color: #e0f7fa; }  /* soft teal */
+  50%  { background-color: #dcedc1; }  /* mint */
+  75%  { background-color: #fff3b0; }  /* pale yellow */
+  100% { background-color: #f0d9ff; }  /* lavender */
 }
