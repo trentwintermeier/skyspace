@@ -4,6 +4,7 @@ body, html {
   overflow: hidden;
   height: 100%;
   width: 100%;
+  background: black;
 }
 
 #video {
@@ -24,5 +25,15 @@ body, html {
   height: 100%;
   z-index: 2;
   pointer-events: none;
-  background: radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.95) 75%);
+  background-color: #ffd6e0; /* pastel starting color */
+  mix-blend-mode: multiply;
+  animation: pastelShift 30s infinite alternate ease-in-out;
+  -webkit-mask-image: radial-gradient(ellipse at center, transparent 25%, black 26%);
+  mask-image: radial-gradient(ellipse at center, transparent 25%, black 26%);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
+
+@keyframes pastelShift {
+  0%   { background-color: #ffd6e0; }  /* light pink */
+  25%
