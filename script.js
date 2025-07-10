@@ -5,8 +5,9 @@ const startOverlay = document.getElementById('start-overlay');
 
 // List of livestreams (YouTube embeds or direct links)
 const livestreams = [
-  "https://www.youtube.com/embed/21X5lGlDOfg?autoplay=1&mute=1&controls=0&playsinline=1", // NASA live
-  "https://www.youtube.com/embed/9Auq9mYxFEE?autoplay=1&mute=1&controls=0&playsinline=1", // BBC News sky cam
+  "https://youtu.be/-1lAxsTsHcQ",
+  "https://youtu.be/O52zDyxg5QI",
+  "https://youtu.be/a0i1Kg6fROg",
   "camera" // special value to trigger AR camera
 ];
 
