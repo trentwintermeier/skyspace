@@ -1,9 +1,9 @@
-body, html {
+html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   background: black;
 }
 
@@ -25,9 +25,10 @@ body, html {
   height: 100%;
   z-index: 2;
   pointer-events: none;
-  background-color: #ffd6e0; /* pastel starting color */
-  mix-blend-mode: multiply;
+  background: #ffd6e0;
   animation: pastelShift 30s infinite alternate ease-in-out;
+
+  /* Oval hole mask */
   -webkit-mask-image: radial-gradient(ellipse at center, transparent 25%, black 26%);
   mask-image: radial-gradient(ellipse at center, transparent 25%, black 26%);
   -webkit-mask-composite: destination-out;
@@ -36,4 +37,8 @@ body, html {
 
 @keyframes pastelShift {
   0%   { background-color: #ffd6e0; }  /* light pink */
-  25%
+  25%  { background-color: #e0f7fa; }  /* soft teal */
+  50%  { background-color: #dcedc1; }  /* mint */
+  75%  { background-color: #fff3b0; }  /* pale yellow */
+  100% { background-color: #f0d9ff; }  /* lavender */
+}
