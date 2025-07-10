@@ -22,3 +22,12 @@ navigator.mediaDevices.enumerateDevices().then(devices => {
 .catch(err => {
   console.error("Camera access failed:", err);
 });
+const music = document.getElementById('background-music');
+
+// Start playing after user interacts (to comply with browser policies)
+document.body.addEventListener('click', () => {
+  music.play().catch(() => {
+    console.log('Playback prevented by browser autoplay policy');
+  });
+});
+
