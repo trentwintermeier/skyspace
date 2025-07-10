@@ -6,9 +6,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <video id="video" autoplay playsinline></video>
+
+  <!-- Rear camera (used only if selected) -->
+  <video id="video" autoplay playsinline muted></video>
+
+  <!-- Livestream iframe (used only if selected) -->
+  <iframe id="sky-feed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+  <!-- Animated ceiling mask with oval hole -->
   <div id="mask"></div>
+
+  <!-- Background music -->
+  <audio id="background-music" src="assets/Tewksbury-Banda-Mountain.mp3" loop></audio>
+
+  <!-- Start overlay to enable audio playback -->
+  <div id="start-overlay">
+    <p>Tap to Begin</p>
+  </div>
+
   <script src="script.js"></script>
-  <audio id="background-music" src="assets/Tewksbury-Banda-Mountain.mp3" autoplay loop></audio>
 </body>
 </html>
