@@ -17,7 +17,7 @@ html, body {
   z-index: 1;
 }
 
-/* Fully opaque ceiling layer */
+/* Ceiling layer with animated pastel background */
 #ceiling {
   position: fixed;
   top: 0;
@@ -29,26 +29,27 @@ html, body {
   background-color: #ffd6e0;
 }
 
-/* Transparent oval hole in the middle */
+/* Oval hole in the center revealing the camera */
 #hole {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 50vw;
-  height: 30vh;
+  width: 60vw;       /* wider oval */
+  height: 35vh;      /* shorter height */
   transform: translate(-50%, -50%);
-  background: black;
+  background: white; /* necessary for destination-out */
   border-radius: 50%;
   mix-blend-mode: destination-out;
   pointer-events: none;
 }
 
-/* Animate background pastel colors */
+/* Pastel color cycling animation */
 @keyframes pastelCycle {
-  0%   { background-color: #ffd6e0; }
-  20%  { background-color: #e0f7fa; }
-  40%  { background-color: #dcedc1; }
-  60%  { background-color: #fff3b0; }
-  80%  { background-color: #f0d9ff; }
-  100% { background-color: #ffd6e0; }
+  0%   { background-color: #ffd6e0; }  /* light pink */
+  16%  { background-color: #e0f7fa; }  /* soft teal */
+  33%  { background-color: #dcedc1; }  /* mint */
+  50%  { background-color: #fff3b0; }  /* pastel yellow */
+  66%  { background-color: #f0d9ff; }  /* lavender */
+  83%  { background-color: #ffe0f0; }  /* blush pink */
+  100% { background-color: #ffd6e0; }  /* loop back */
 }
