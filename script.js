@@ -5,10 +5,10 @@ const startOverlay = document.getElementById('start-overlay');
 
 // List of livestreams (YouTube embeds or direct links)
 const livestreams = [
-  "https://youtu.be/-1lAxsTsHcQ",
-  "https://youtu.be/O52zDyxg5QI",
-  "https://youtu.be/a0i1Kg6fROg",
-  "camera" // special value to trigger AR camera
+  "https://www.youtube.com/embed/O52zDyxg5QI?autoplay=1&mute=1&controls=0&playsinline=1", // Fairbanks Aurora Camera
+  "https://www.youtube.com/embed/a0i1Kg6fROg?autoplay=1&mute=1&controls=0&playsinline=1",  // Northern Lights
+  "https://www.youtube.com/embed/-1lAxsTsHcQ?autoplay=1&mute=1&controls=0&playsinline=1",  // Sky Tower Cam
+  "camera" // fallback to AR rear camera
 ];
 
 // Randomly select a stream or the camera
