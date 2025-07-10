@@ -17,7 +17,6 @@ html, body {
   z-index: 1;
 }
 
-/* Mask Layer */
 #mask {
   position: fixed;
   top: 0;
@@ -26,27 +25,20 @@ html, body {
   height: 100%;
   z-index: 2;
   pointer-events: none;
+  background: #ffd6e0;
+  animation: pastelShift 30s infinite alternate ease-in-out;
 
-  /* Begin with a pastel color */
-  background-color: #ffd6e0;
-
-  /* Elliptical transparent hole in the center */
+  /* Oval hole mask */
   -webkit-mask-image: radial-gradient(ellipse at center, transparent 25%, black 26%);
   mask-image: radial-gradient(ellipse at center, transparent 25%, black 26%);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
-
-  animation: pastelCycle 30s infinite linear;
 }
 
-@keyframes pastelCycle {
+@keyframes pastelShift {
   0%   { background-color: #ffd6e0; }  /* light pink */
-  16%  { background-color: #e0f7fa; }  /* soft teal */
-  33%  { background-color: #dcedc1; }  /* mint */
-  50%  { background-color: #fff3b0; }  /* pastel yellow */
-  66%  { background-color: #f0d9ff; }  /* lavender */
-  83%  { background-color: #ffe0f0; }  /* blush pink */
-  100% { background-color: #ffd6e0; }  /* loop back */
+  25%  { background-color: #e0f7fa; }  /* soft teal */
+  50%  { background-color: #dcedc1; }  /* mint */
+  75%  { background-color: #fff3b0; }  /* pale yellow */
+  100% { background-color: #f0d9ff; }  /* lavender */
 }
-
-
