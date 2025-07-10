@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Skyspace AR</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <video id="video" autoplay playsinline></video>
-
-  <!-- Opaque ceiling with animated color -->
-  <div id="ceiling">
-    <!-- Transparent hole (real hole div punched through with mix-blend-mode) -->
-    <div id="hole"></div>
-  </div>
-
+  <div id="mask"></div>
   <script src="script.js"></script>
 </body>
 </html>
-
