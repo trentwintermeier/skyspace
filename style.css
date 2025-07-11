@@ -28,7 +28,6 @@ html, body {
   background: #ffd6e0;
   animation: pastelShift 30s infinite alternate ease-in-out;
 
-  /* Oval hole mask */
   -webkit-mask-image: radial-gradient(ellipse at center, transparent 25%, black 26%);
   mask-image: radial-gradient(ellipse at center, transparent 25%, black 26%);
   -webkit-mask-composite: destination-out;
@@ -36,9 +35,31 @@ html, body {
 }
 
 @keyframes pastelShift {
-  0%   { background-color: #ffd6e0; }  /* light pink */
-  25%  { background-color: #e0f7fa; }  /* soft teal */
-  50%  { background-color: #dcedc1; }  /* mint */
-  75%  { background-color: #fff3b0; }  /* pale yellow */
-  100% { background-color: #f0d9ff; }  /* lavender */
+  0%   { background-color: #ffd6e0; }  
+  25%  { background-color: #e0f7fa; }  
+  50%  { background-color: #dcedc1; }  
+  75%  { background-color: #fff3b0; }  
+  100% { background-color: #f0d9ff; }  
+}
+
+#start-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+}
+
+#start-overlay.fade {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
 }
