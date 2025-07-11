@@ -30,4 +30,10 @@ document.body.addEventListener('click', () => {
     console.log('Playback prevented by browser autoplay policy');
   });
 });
+startOverlay.addEventListener('click', () => {
+  music.play().catch(() => {
+    console.log("Music autoplay blocked.");
+  });
+});
+
 
