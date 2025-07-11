@@ -2,20 +2,16 @@ const video = document.getElementById('video');
 const music = document.getElementById('background-music');
 const startOverlay = document.getElementById('start-overlay');
 
-// Handle user tap to start music + camera
 startOverlay.addEventListener('click', () => {
-  // Start music
   music.play().then(() => {
     console.log("✅ Music playing");
   }).catch((err) => {
     console.error("❌ Music failed to play:", err);
   });
 
-  // Hide overlay
   startOverlay.classList.add('fade');
   setTimeout(() => startOverlay.remove(), 600);
 
-  // Start rear-facing camera
   navigator.mediaDevices.enumerateDevices().then(devices => {
     const videoDevices = devices.filter(device => device.kind === 'videoinput');
 
