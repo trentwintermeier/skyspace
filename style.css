@@ -60,7 +60,7 @@ html, body {
 }
 
 #start-overlay.fade {
-  opacity: 50;
+  opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
 }
